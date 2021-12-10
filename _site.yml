@@ -3,11 +3,12 @@ title: "Portfolio Elizabeth Mie Hashimoto"
 description: |
   Portfolio Elizabeth Mie Hashimoto
 output_dir: "docs"
-theme: tema_semana_cursoR.css
 navbar:
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
-output: distill::distill_article
+output:
+  distill::distill_article:
+    css: tema_semana_cursoR.css

@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["analiserais_files/anchor-4.2.2/anchor.min.js","analiserais_files/bowser-1.9.3/bowser.min.js","analiserais_files/distill-2.2.21/template.v2.js","analiserais_files/header-attrs-2.11/header-attrs.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.min.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.min.map","analiserais_files/popper-2.6.0/popper.min.js","analiserais_files/tippy-6.2.7/tippy-bundle.umd.min.js","analiserais_files/tippy-6.2.7/tippy-light-border.css","analiserais_files/tippy-6.2.7/tippy.css","analiserais_files/tippy-6.2.7/tippy.umd.min.js","analiserais_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["analiserais_files/anchor-4.2.2/anchor.min.js","analiserais_files/bowser-1.9.3/bowser.min.js","analiserais_files/distill-2.2.21/template.v2.js","analiserais_files/figure-html5/unnamed-chunk-10-1.png","analiserais_files/figure-html5/unnamed-chunk-11-1.png","analiserais_files/figure-html5/unnamed-chunk-12-1.png","analiserais_files/figure-html5/unnamed-chunk-16-1.png","analiserais_files/figure-html5/unnamed-chunk-17-1.png","analiserais_files/figure-html5/unnamed-chunk-6-1.png","analiserais_files/header-attrs-2.11/header-attrs.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.min.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.min.map","analiserais_files/popper-2.6.0/popper.min.js","analiserais_files/tippy-6.2.7/tippy-bundle.umd.min.js","analiserais_files/tippy-6.2.7/tippy-light-border.css","analiserais_files/tippy-6.2.7/tippy.css","analiserais_files/tippy-6.2.7/tippy.umd.min.js","analiserais_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1482,12 +1482,440 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
 <!--Este é o meu **primeiro projeto** no portfolio.-->
 <p>Neste relatório estamos interessados em responder a pergunta:</p>
-<p style="text-align:center">
-“Quanto ganha um cientista de dados?”
-</p>
-<p>Para isso vamos utilizar a base da RAIS anonimizada.</p>
+<blockquote>
+<p>“Quem trabalha com ciência de dados ganha quanto?”</p>
+</blockquote>
+<p>Com está finalidade, vamos utilizar a base da RAIS anonimizada.</p>
+<h1 id="acessando-os-dados-da-rais">Acessando os dados da RAIS</h1>
+<p>Desta forma, vamos utitilizar <a href="https://basedosdados.org/">o datalake da iniciativa base dos dados</a>. O código, a seguir, carrega as primeiras cinco linhas e as primeiras seis colunas da tabela do microdados.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 1: </span>Base de dados RAIS</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ano</th>
+<th style="text-align: center;">sigla_uf</th>
+<th style="text-align: center;">id_municipio</th>
+<th style="text-align: center;">tipo_vinculo</th>
+<th style="text-align: center;">vinculo_ativo_3112</th>
+<th style="text-align: center;">tipo_admissao</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1985</td>
+<td style="text-align: center;">AM</td>
+<td style="text-align: center;">1300102</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1985</td>
+<td style="text-align: center;">AM</td>
+<td style="text-align: center;">1300102</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1985</td>
+<td style="text-align: center;">AM</td>
+<td style="text-align: center;">1300102</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1985</td>
+<td style="text-align: center;">AM</td>
+<td style="text-align: center;">1300102</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1985</td>
+<td style="text-align: center;">AM</td>
+<td style="text-align: center;">1300102</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A base de dados que queremos analisar aqui é a base de pessoas que (potencialmente) trabalham com ciência de dados. Existe um Código Brasileiro de Ocupações (CBO), que tem um cadastro de todas as ocupações formais no Brasil. Vamos pegar alguns códigos que são relacionados a ciência de dados e filtrar a base da RAIS para obter os dados dessas pessoas.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-5">Table 2: </span>Microdados vinculados com profissionais de ciência de dados</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">ano</th>
+<th style="text-align: center;">sigla_uf</th>
+<th style="text-align: center;">id_municipio</th>
+<th style="text-align: center;">tipo_vinculo</th>
+<th style="text-align: center;">vinculo_ativo_3112</th>
+<th style="text-align: center;">tipo_admissao</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">RR</td>
+<td style="text-align: center;">1400100</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">RR</td>
+<td style="text-align: center;">1400100</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">RR</td>
+<td style="text-align: center;">1400100</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">RR</td>
+<td style="text-align: center;">1400100</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">RR</td>
+<td style="text-align: center;">1400100</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="perguntas-da-pesquisa">Perguntas da pesquisa</h2>
+<ul>
+<li>Quanto ganha uma pessoa que trabalha com ciência de dados?</li>
+</ul>
+<p>Perguntas mais específicas</p>
+<ul>
+<li>Quanto o valor médio varia no tempo?</li>
+<li>Quanto valor médio varia regionalmente?</li>
+<li>Quanto valor médio varia por características das pessoas?
+<ul>
+<li>Gênero</li>
+<li>Raça/cor</li>
+<li>Idade</li>
+</ul></li>
+<li>[Desafio] Qual cargo tem a maior taxa de crescimento dentro daquele setor da economia (CNAE) proporcionalmente a municipios com mais pessoas empregadas naquela CBO?</li>
+</ul>
+<h3 id="quanto-o-valor-médio-varia-no-tempo">Quanto o valor médio varia no tempo?</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="analiserais_files/figure-html5/unnamed-chunk-6-1.png" width="624" height="60%" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-7">Table 3: </span>Média do salário médio (reais)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Ano</th>
+<th style="text-align: center;">Média do salário médio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;">3457.553</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2014</td>
+<td style="text-align: center;">3702.131</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2015</td>
+<td style="text-align: center;">4229.452</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2016</td>
+<td style="text-align: center;">4409.327</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2017</td>
+<td style="text-align: center;">4969.977</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2018</td>
+<td style="text-align: center;">4886.116</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;">4969.408</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="quanto-o-salário-médio-varia-regionalmente">Quanto o salário médio varia regionalmente?</h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-9">Table 4: </span>Média e mediana do salário médio (reais)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Estado</th>
+<th style="text-align: center;">Média do salário médio</th>
+<th style="text-align: center;">Mediana do salário médio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">AC</td>
+<td style="text-align: center;">2213.220</td>
+<td style="text-align: center;">1334.445</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AL</td>
+<td style="text-align: center;">1921.249</td>
+<td style="text-align: center;">1279.175</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">AM</td>
+<td style="text-align: center;">4003.298</td>
+<td style="text-align: center;">3276.510</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">AP</td>
+<td style="text-align: center;">2488.921</td>
+<td style="text-align: center;">1473.145</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">BA</td>
+<td style="text-align: center;">3444.450</td>
+<td style="text-align: center;">1923.050</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">CE</td>
+<td style="text-align: center;">3583.833</td>
+<td style="text-align: center;">1790.210</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DF</td>
+<td style="text-align: center;">6290.945</td>
+<td style="text-align: center;">4715.790</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ES</td>
+<td style="text-align: center;">2289.896</td>
+<td style="text-align: center;">1450.890</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">GO</td>
+<td style="text-align: center;">3053.561</td>
+<td style="text-align: center;">1858.930</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">MA</td>
+<td style="text-align: center;">1518.701</td>
+<td style="text-align: center;">1008.330</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">MG</td>
+<td style="text-align: center;">3373.300</td>
+<td style="text-align: center;">2124.070</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">MS</td>
+<td style="text-align: center;">2671.339</td>
+<td style="text-align: center;">2199.530</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">MT</td>
+<td style="text-align: center;">2520.127</td>
+<td style="text-align: center;">1872.510</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">PA</td>
+<td style="text-align: center;">4239.167</td>
+<td style="text-align: center;">2255.790</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">PB</td>
+<td style="text-align: center;">1852.823</td>
+<td style="text-align: center;">1222.690</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">PE</td>
+<td style="text-align: center;">4014.886</td>
+<td style="text-align: center;">2540.750</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">PI</td>
+<td style="text-align: center;">1556.301</td>
+<td style="text-align: center;">1093.530</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">PR</td>
+<td style="text-align: center;">2835.612</td>
+<td style="text-align: center;">1728.040</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RJ</td>
+<td style="text-align: center;">7303.597</td>
+<td style="text-align: center;">7528.560</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RN</td>
+<td style="text-align: center;">2495.838</td>
+<td style="text-align: center;">2050.670</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RO</td>
+<td style="text-align: center;">1943.391</td>
+<td style="text-align: center;">1347.035</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">RR</td>
+<td style="text-align: center;">2780.840</td>
+<td style="text-align: center;">2000.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RS</td>
+<td style="text-align: center;">3434.072</td>
+<td style="text-align: center;">2211.380</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SC</td>
+<td style="text-align: center;">3033.095</td>
+<td style="text-align: center;">1833.685</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">SE</td>
+<td style="text-align: center;">3733.273</td>
+<td style="text-align: center;">2134.990</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SP</td>
+<td style="text-align: center;">5053.901</td>
+<td style="text-align: center;">3862.090</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">TO</td>
+<td style="text-align: center;">1981.932</td>
+<td style="text-align: center;">1352.080</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Agora, olhando em gráfico</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="analiserais_files/figure-html5/unnamed-chunk-10-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="analiserais_files/figure-html5/unnamed-chunk-11-1.png" width="624" /></p>
+</div>
+<h3 id="os-salários-variam-de-acordo-com-o-gênero">Os salários variam de acordo com o gênero?</h3>
+<p>Essa visualização a principio é melhor em tabela</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-13">Table 5: </span>Média e mediana do salário médio (reais)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Gênero</th>
+<th style="text-align: center;">Média do salário médio</th>
+<th style="text-align: center;">Mediana do salário médio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">5331.746</td>
+<td style="text-align: center;">3905.72</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3600.132</td>
+<td style="text-align: center;">2300.71</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="os-salários-variam-de-acordo-com-a-raçacor">Os salários variam de acordo com a raça/cor?</h3>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-15">Table 6: </span>Média e mediana do salário médio (reais)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Raça/cor</th>
+<th style="text-align: center;">Média do salário médio</th>
+<th style="text-align: center;">Mediana do salário médio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3085.090</td>
+<td style="text-align: center;">2748.890</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">4287.588</td>
+<td style="text-align: center;">2888.915</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3014.454</td>
+<td style="text-align: center;">2072.205</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6783.212</td>
+<td style="text-align: center;">5338.735</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">2732.073</td>
+<td style="text-align: center;">1749.345</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">5656.755</td>
+<td style="text-align: center;">4888.030</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="os-salários-variam-de-acordo-com-o-idade">Os salários variam de acordo com o idade?</h3>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="analiserais_files/figure-html5/unnamed-chunk-16-1.png" width="624" height="60%" style="display: block; margin: auto;" /></p>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

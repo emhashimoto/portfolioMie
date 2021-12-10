@@ -22,6 +22,7 @@ knitr::opts_chunk$set(echo = FALSE,
 # Pacotes
 library(bigrquery)
 library(tidyverse)
+library(gridExtra)
 ```
 
 <!--Este é o meu **primeiro projeto** no portfolio.-->
@@ -107,7 +108,7 @@ Perguntas mais específicas
 
 ### Quanto o valor médio varia no tempo?
 
-```{r, fig.align='center', out.height='60%', fig.cap='Gráfico de barras da média do salário médio por ano'}
+```{r, fig.align='center', out.height='60%'}
 tabela_medias <- tabela_microdados_vinculos |> 
   group_by(ano) |> 
   summarise(media_salario = mean(valor_remuneracao_media)) 
@@ -146,7 +147,6 @@ tabela_resumo_uf |>
 ```
 
 
-
 Agora, olhando em gráfico
 
 ```{r}
@@ -169,7 +169,6 @@ tabela_resumo_uf |>
   geom_col(fill='deepskyblue3') +
   labs(x = 'Mediana do salário médio (reais)', y = 'Estado')
 ```
-
 
 ### Os salários variam de acordo com o gênero?
 
@@ -209,7 +208,7 @@ tabela_resumo_cor |>
 
 ### Os salários variam de acordo com o idade?
 
-```{r, fig.align='center', out.height='60%', fig.cap='Gráfico de dispersão'}
+```{r, fig.align='center', out.height='60%'}
 tabela_microdados_vinculos |> 
   ggplot(aes(x = idade, y = valor_remuneracao_media)) +
   geom_point() +

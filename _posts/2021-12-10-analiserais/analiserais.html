@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["analiserais_files/anchor-4.2.2/anchor.min.js","analiserais_files/bowser-1.9.3/bowser.min.js","analiserais_files/distill-2.2.21/template.v2.js","analiserais_files/figure-html5/unnamed-chunk-10-1.png","analiserais_files/figure-html5/unnamed-chunk-11-1.png","analiserais_files/figure-html5/unnamed-chunk-12-1.png","analiserais_files/figure-html5/unnamed-chunk-16-1.png","analiserais_files/figure-html5/unnamed-chunk-17-1.png","analiserais_files/figure-html5/unnamed-chunk-6-1.png","analiserais_files/header-attrs-2.11/header-attrs.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.min.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.min.map","analiserais_files/popper-2.6.0/popper.min.js","analiserais_files/tippy-6.2.7/tippy-bundle.umd.min.js","analiserais_files/tippy-6.2.7/tippy-light-border.css","analiserais_files/tippy-6.2.7/tippy.css","analiserais_files/tippy-6.2.7/tippy.umd.min.js","analiserais_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["analiserais_files/anchor-4.2.2/anchor.min.js","analiserais_files/bowser-1.9.3/bowser.min.js","analiserais_files/distill-2.2.21/template.v2.js","analiserais_files/figure-html5/unnamed-chunk-10-1.png","analiserais_files/figure-html5/unnamed-chunk-11-1.png","analiserais_files/figure-html5/unnamed-chunk-12-1.png","analiserais_files/figure-html5/unnamed-chunk-16-1.png","analiserais_files/figure-html5/unnamed-chunk-17-1.png","analiserais_files/figure-html5/unnamed-chunk-18-1.png","analiserais_files/figure-html5/unnamed-chunk-6-1.png","analiserais_files/header-attrs-2.11/header-attrs.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.min.js","analiserais_files/jquery-3.6.0/jquery-3.6.0.min.map","analiserais_files/popper-2.6.0/popper.min.js","analiserais_files/tippy-6.2.7/tippy-bundle.umd.min.js","analiserais_files/tippy-6.2.7/tippy-light-border.css","analiserais_files/tippy-6.2.7/tippy.css","analiserais_files/tippy-6.2.7/tippy.umd.min.js","analiserais_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1491,7 +1491,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>“Quem trabalha com ciência de dados ganha quanto?”</p>
 </blockquote>
 <p>Com está finalidade, vamos utilizar a base da RAIS anonimizada.</p>
-<h1 id="acessando-os-dados-da-rais">Acessando os dados da RAIS</h1>
+<h1 id="acessando-os-dados-da-rais">Acessando os Dados da RAIS</h1>
 <p>Desta forma, vamos utitilizar <a href="https://basedosdados.org/">o datalake da iniciativa base dos dados</a>. O código, a seguir, carrega as primeiras cinco linhas e as primeiras seis colunas da tabela do microdados.</p>
 <div class="layout-chunk" data-layout="l-body">
 
@@ -1915,6 +1915,262 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3 id="os-salários-variam-de-acordo-com-o-idade">Os salários variam de acordo com o idade?</h3>
 <div class="layout-chunk" data-layout="l-body">
 <p><img src="analiserais_files/figure-html5/unnamed-chunk-16-1.png" width="624" height="60%" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="analiserais_files/figure-html5/unnamed-chunk-17-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="analiserais_files/figure-html5/unnamed-chunk-18-1.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<table>
+<caption><span id="tab:unnamed-chunk-20">Table 7: </span>Estimativas</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Estimate</th>
+<th style="text-align: center;">Std. Error</th>
+<th style="text-align: center;">t value</th>
+<th style="text-align: center;">Pr(&gt;|t|)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: center;">7.5318393</td>
+<td style="text-align: center;">0.1332411</td>
+<td style="text-align: center;">56.5279097</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">idade</td>
+<td style="text-align: center;">0.0189987</td>
+<td style="text-align: center;">0.0001779</td>
+<td style="text-align: center;">106.7822272</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">grau_instrucao_apos_200510</td>
+<td style="text-align: center;">0.3096654</td>
+<td style="text-align: center;">0.1143623</td>
+<td style="text-align: center;">2.7077574</td>
+<td style="text-align: center;">0.0067748</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">grau_instrucao_apos_200511</td>
+<td style="text-align: center;">-0.0366973</td>
+<td style="text-align: center;">0.1220929</td>
+<td style="text-align: center;">-0.3005690</td>
+<td style="text-align: center;">0.7637437</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">grau_instrucao_apos_20052</td>
+<td style="text-align: center;">-0.9053109</td>
+<td style="text-align: center;">0.1343188</td>
+<td style="text-align: center;">-6.7400158</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">grau_instrucao_apos_20053</td>
+<td style="text-align: center;">-1.0239568</td>
+<td style="text-align: center;">0.1222627</td>
+<td style="text-align: center;">-8.3750553</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">grau_instrucao_apos_20054</td>
+<td style="text-align: center;">-1.2880450</td>
+<td style="text-align: center;">0.1148871</td>
+<td style="text-align: center;">-11.2114021</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">grau_instrucao_apos_20055</td>
+<td style="text-align: center;">-1.1533503</td>
+<td style="text-align: center;">0.1126096</td>
+<td style="text-align: center;">-10.2420261</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">grau_instrucao_apos_20056</td>
+<td style="text-align: center;">-1.0765872</td>
+<td style="text-align: center;">0.1124042</td>
+<td style="text-align: center;">-9.5778217</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">grau_instrucao_apos_20057</td>
+<td style="text-align: center;">-0.9757232</td>
+<td style="text-align: center;">0.1120577</td>
+<td style="text-align: center;">-8.7073270</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">grau_instrucao_apos_20058</td>
+<td style="text-align: center;">-0.5686113</td>
+<td style="text-align: center;">0.1120991</td>
+<td style="text-align: center;">-5.0723985</td>
+<td style="text-align: center;">0.0000004</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">grau_instrucao_apos_20059</td>
+<td style="text-align: center;">-0.2307761</td>
+<td style="text-align: center;">0.1120473</td>
+<td style="text-align: center;">-2.0596316</td>
+<td style="text-align: center;">0.0394358</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sexo2</td>
+<td style="text-align: center;">-0.0427863</td>
+<td style="text-align: center;">0.0842316</td>
+<td style="text-align: center;">-0.5079605</td>
+<td style="text-align: center;">0.6114819</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">raca_cor2</td>
+<td style="text-align: center;">0.2530560</td>
+<td style="text-align: center;">0.0712663</td>
+<td style="text-align: center;">3.5508489</td>
+<td style="text-align: center;">0.0003841</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">raca_cor4</td>
+<td style="text-align: center;">0.0736889</td>
+<td style="text-align: center;">0.0725956</td>
+<td style="text-align: center;">1.0150609</td>
+<td style="text-align: center;">0.3100787</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">raca_cor6</td>
+<td style="text-align: center;">0.4280025</td>
+<td style="text-align: center;">0.0734271</td>
+<td style="text-align: center;">5.8289420</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">raca_cor8</td>
+<td style="text-align: center;">-0.0282875</td>
+<td style="text-align: center;">0.0713982</td>
+<td style="text-align: center;">-0.3961929</td>
+<td style="text-align: center;">0.6919634</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">raca_cor9</td>
+<td style="text-align: center;">-0.0111139</td>
+<td style="text-align: center;">0.0716859</td>
+<td style="text-align: center;">-0.1550365</td>
+<td style="text-align: center;">0.8767928</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">indicador_portador_deficiencia</td>
+<td style="text-align: center;">-0.2150107</td>
+<td style="text-align: center;">0.0152680</td>
+<td style="text-align: center;">-14.0824151</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tamanho_estabelecimento10</td>
+<td style="text-align: center;">0.6534192</td>
+<td style="text-align: center;">0.0097777</td>
+<td style="text-align: center;">66.8276708</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tamanho_estabelecimento2</td>
+<td style="text-align: center;">-0.0951624</td>
+<td style="text-align: center;">0.0105178</td>
+<td style="text-align: center;">-9.0477197</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tamanho_estabelecimento3</td>
+<td style="text-align: center;">-0.0112529</td>
+<td style="text-align: center;">0.0105287</td>
+<td style="text-align: center;">-1.0687798</td>
+<td style="text-align: center;">0.2851709</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tamanho_estabelecimento4</td>
+<td style="text-align: center;">0.0319015</td>
+<td style="text-align: center;">0.0101150</td>
+<td style="text-align: center;">3.1538859</td>
+<td style="text-align: center;">0.0016115</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tamanho_estabelecimento5</td>
+<td style="text-align: center;">0.1173277</td>
+<td style="text-align: center;">0.0097283</td>
+<td style="text-align: center;">12.0604996</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tamanho_estabelecimento6</td>
+<td style="text-align: center;">0.1682348</td>
+<td style="text-align: center;">0.0099286</td>
+<td style="text-align: center;">16.9445256</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tamanho_estabelecimento7</td>
+<td style="text-align: center;">0.2086200</td>
+<td style="text-align: center;">0.0097513</td>
+<td style="text-align: center;">21.3941081</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tamanho_estabelecimento8</td>
+<td style="text-align: center;">0.3626034</td>
+<td style="text-align: center;">0.0104013</td>
+<td style="text-align: center;">34.8612712</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tamanho_estabelecimento9</td>
+<td style="text-align: center;">0.4107704</td>
+<td style="text-align: center;">0.0111840</td>
+<td style="text-align: center;">36.7283069</td>
+<td style="text-align: center;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sexo2:raca_cor2</td>
+<td style="text-align: center;">-0.1726397</td>
+<td style="text-align: center;">0.0843231</td>
+<td style="text-align: center;">-2.0473605</td>
+<td style="text-align: center;">0.0406247</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sexo2:raca_cor4</td>
+<td style="text-align: center;">-0.1621263</td>
+<td style="text-align: center;">0.0860176</td>
+<td style="text-align: center;">-1.8848032</td>
+<td style="text-align: center;">0.0594587</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sexo2:raca_cor6</td>
+<td style="text-align: center;">-0.1854865</td>
+<td style="text-align: center;">0.0877329</td>
+<td style="text-align: center;">-2.1142173</td>
+<td style="text-align: center;">0.0344986</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">sexo2:raca_cor8</td>
+<td style="text-align: center;">-0.0801116</td>
+<td style="text-align: center;">0.0844741</td>
+<td style="text-align: center;">-0.9483572</td>
+<td style="text-align: center;">0.3429494</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sexo2:raca_cor9</td>
+<td style="text-align: center;">-0.0972746</td>
+<td style="text-align: center;">0.0848160</td>
+<td style="text-align: center;">-1.1468896</td>
+<td style="text-align: center;">0.2514294</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

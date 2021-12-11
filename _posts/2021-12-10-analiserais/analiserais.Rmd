@@ -33,7 +33,7 @@ Neste relatório estamos interessados em responder a pergunta:
 
 Com está finalidade, vamos utilizar a base da RAIS anonimizada.
 
-# Acessando os dados da RAIS
+# Acessando os Dados da RAIS
 
 Desta forma, vamos utitilizar [o datalake da iniciativa base dos dados](https://basedosdados.org/). O código, a seguir, carrega as primeiras cinco linhas e as primeiras seis colunas da tabela do microdados.
 
@@ -214,4 +214,38 @@ tabela_microdados_vinculos |>
   geom_point() +
   labs(x = 'Idade (anos)', y = 'Salário médio')
 ```
+
+```{r}
+tabela_microdados_vinculos |> 
+  ggplot(aes(x = log(valor_remuneracao_media))) +
+  geom_histogram() +
+  facet_wrap(~cbo_2002, scales = 'free')
+```
+
+```{r}
+tabela_microdados_vinculos |> 
+  filter(cbo_2002 == '252525') |> 
+  ggplot(aes(x = log(valor_remuneracao_media))) +
+  geom_histogram() +
+  facet_wrap(~cbo_2002, scales = 'free')
+```
+
+```{r}
+microdados252525 <- tabela_microdados_vinculos |> 
+  filter(cbo_2002 == '252525', valor_remuneracao_media>0) |> 
+  mutate(log_vrm=log(valor_remuneracao_media))
+```
+
+
+```{r}
+fit <- lm(log_vrm~idade+grau_instrucao_apos_2005+
+            sexo*raca_cor+
+            indicador_portador_deficiencia+
+            tamanho_estabelecimento, data = microdados252525)
+out <- summary(fit)
+
+tabela_lm <- xtable::xtable(out)
+knitr::kable(tabela_lm, align = c('c'), caption = 'Estimativas')
+```
+
 

@@ -2,4 +2,5 @@
 title: "Portfolio Elizabeth Mie Hashimoto"
 site: distill::distill_website
 listing: posts
+theme: tema_semana_cursoR.css
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Portfolio Elizabeth Mie Hashimoto"
+title: "Portfolio Elizabeth Mie Hashimoto 統計学"
 site: distill::distill_website
 listing: posts
 theme: tema_semana_cursoR.css
